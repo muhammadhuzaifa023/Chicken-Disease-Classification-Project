@@ -1,8 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
-from dataclasses import dataclass
-from pathlib import Path
-#Entity
+
 
 @dataclass(frozen=True)
 class DataIngestionConfig:
@@ -21,3 +19,9 @@ class PrepareBaseModelConfig:
     params_include_top: bool
     params_weights: str
     params_classes: int
+
+@dataclass(frozen=True)
+class PrepareCallbacksConfig:
+    root_dir: Path
+    tensorboard_root_log_dir: Path
+    checkpoint_model_filepath: Path
